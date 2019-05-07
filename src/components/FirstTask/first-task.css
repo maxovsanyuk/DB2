@@ -1,0 +1,11 @@
+.home{
+    width: calc( 100% - 120px);
+    min-width: 800px;
+    height: 100%;
+    background: #7b867e url(../../img/IAP34240.png)no-repeat center;
+    background-size: 40%;
+    position: absolute;
+    left: 120px;
+    top: 0;
+    border: none;
+}

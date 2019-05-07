@@ -1,4 +1,8 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import './App.css';
+import Header from '../Header/header';
+
 
 class App extends Component {
   constructor(props){
@@ -9,9 +13,10 @@ class App extends Component {
     }
   }
 
-
   componentDidMount() {
-    fetch('http://swapi.co/api/people/1/')
+    const proxyurl = "https://cors-anywhere.herokuapp.com/";
+    const url = 'http://swapi.co/api/films';
+    fetch(proxyurl + url)
     .then(response => response.json())
     .then(data => {
       this.setState({
@@ -22,15 +27,18 @@ class App extends Component {
     })
   }
 
+
   render() {
     return (
-      <Fragment>
+      <Router>
           { this.state.isLoaded ? (
-          <div>Hello</div>
+          <section className="init-section">
+            <Header data={this.state} />
+          </section>
         ) : (
-          <div>Loading...</div>
+          <div className="preloader"></div>
         )}
-      </Fragment>
+      </Router>
     );
   }
 }
