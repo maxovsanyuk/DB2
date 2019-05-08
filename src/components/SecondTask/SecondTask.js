@@ -1,38 +1,24 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import Films from '../Films/films';
 import People from '../People/people';
 import Planets from '../Planets/planets';
 import Species from '../Species/species';
 import Starships from '../Starships/starships';
 import Vehicles from '../Vehicles/vehicles';
-import './second-task.css'
+import './SecondTask.css'
 
 class SecondTask extends Component {
     constructor(props){
       super(props);
+      console.log(props);
     }
-
-
-    // componentDidMount() {
-    //   const proxyurl = "https://cors-anywhere.herokuapp.com/";
-    //   const url = 'http://swapi.co/api/films';
-    //   fetch(proxyurl + url)
-    //   .then(response => response.json())
-    //   .then(data => {
-    //     this.setState({
-    //       data: data.results,
-    //       isLoaded: true,
-    //     })
-    //     console.log(this.state.data);
-    //   })
-    // }
-
 
     render() {
       return (
        <div className="films">
-        <Link to="/second-task/films">
+       <div className="q">
+       <Link to="/second-task/films">
         	<div>Films</div>
         </Link>
 
@@ -55,6 +41,7 @@ class SecondTask extends Component {
         <Link to="/second-task/vehicles">
           <div>Vehicles</div>
         </Link>
+       </div>
 
         <Route path="/second-task/films" component={Films} />
         <Route path="/second-task/people" component={People} />

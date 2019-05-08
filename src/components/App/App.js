@@ -1,46 +1,95 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import './App.css';
 import Header from '../Header/header';
 
 
 class App extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      data : [],
-      isLoaded: false,
-    }
-  }
+	constructor(props){
+   	super(props);
+   	this.state = {
+			films : [],
+			people: [],
+			planets: [],
+			species: [],
+			starships: [],
+			vehicles: [],
+			isLoaded: false,
+		}
+	}
 
   componentDidMount() {
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
-    const url = 'http://swapi.co/api/films';
-    fetch(proxyurl + url)
+    const filmsUrl = 'http://swapi.co/api/films';
+    fetch(proxyurl + filmsUrl)
     .then(response => response.json())
-    .then(data => {
-      this.setState({
-        data: data.results,
-        isLoaded: true,
-      })
-      console.log(this.state.data);
+    .then(films => {
+		this.setState({
+			films: films.results,
+		})
     })
-  }
+
+   const peopleUrl = 'http://swapi.co/api/people';
+   fetch(proxyurl + peopleUrl)
+   .then(response => response.json())
+   .then(people => {
+		this.setState({
+			people: people.results,
+		})
+   })
+
+   const planetsUrl = 'http://swapi.co/api/planets';
+   fetch(proxyurl + planetsUrl)
+   .then(response => response.json())
+   .then(planets => {
+		this.setState({
+			planets: planets.results,
+		})
+   })
+
+   const speciesUrl = 'http://swapi.co/api/species';
+   fetch(proxyurl + speciesUrl)
+   .then(response => response.json())
+   .then(species => {
+		this.setState({
+			species: species.results,
+		})
+   })
+
+   const starshipsUrl = 'http://swapi.co/api/starships';
+   fetch(proxyurl + starshipsUrl)
+   .then(response => response.json())
+   .then(starships => {
+		this.setState({
+			starships: starships.results,
+		})
+   })
+
+   const vehiclesUrl = 'http://swapi.co/api/vehicles';
+   fetch(proxyurl + vehiclesUrl)
+   .then(response => response.json())
+   .then(vehicles => {
+		this.setState({
+			vehicles: vehicles.results,
+			isLoaded: true,
+		})
+   })
+}
 
 
-  render() {
-    return (
-      <Router>
-          { this.state.isLoaded ? (
-          <section className="init-section">
-            <Header data={this.state} />
-          </section>
-        ) : (
-          <div className="preloader"></div>
-        )}
-      </Router>
-    );
-  }
+  	render() {
+		return (
+			<Router>
+				{ this.state.isLoaded ? (
+				<section className="init-section">
+					<Header data={this.state} />
+				</section>
+				) : (
+				<div className="preloader"></div>
+				)}
+			</Router>
+    	);
+  	}
 }
 
 export default App;

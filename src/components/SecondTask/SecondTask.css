@@ -1,8 +1,18 @@
 .films{
-    width: 100%;
+    width: calc( 100% - 120px);
+    min-width: 800px;
     height: 100%;
-    background: rgb(236, 225, 225);
+    background: url(../../img/bg.jpeg)no-repeat center;
+    background-size: cover;
     position: absolute;
     left: 120px;
     top: 0;
+}
+
+
+.q{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background: #000;
 }

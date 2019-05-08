@@ -13,3 +13,8 @@
     background: #083142 url(../../img/ada673119a41a7538cc192c2df75f8e2.gif)no-repeat center;
     background-size: 30%;
 }
+
+
+.hidden{
+    display: none;
+}
