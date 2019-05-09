@@ -1,38 +1,38 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import './starships.css';
 
 class Starships extends Component {
-    constructor(props){
-      super(props);
-      this.state = {
-        data : [],
-        isLoaded: false,
-      }
-    }
+	constructor(props){
+		super(props);
+   }
 
+   	render() {
+		let allFilms = this.props.data.map((item, index) => {
+			return(
+				<section key={index} className="starships-section">
+					<span className="name">Name: {item.name}</span>
+					<span>Model: {item.model}</span>
+					<span>Starship class: {item.starship_class}</span>
+               <span>Passengers: {item.passengers}</span>
+					<span>Consumables: {item.consumables}</span>
+					<span>Cargo capacity: {item.cargo_capacity}</span>
+					<span>Length: {item.length}</span>
+				</section>
+         )
+		});
 
-    componentDidMount() {
-      const proxyurl = "https://cors-anywhere.herokuapp.com/";
-      const url = 'http://swapi.co/api/films';
-      fetch(proxyurl + url)
-      .then(response => response.json())
-      .then(data => {
-        this.setState({
-          data: data.results,
-          isLoaded: true,
-        })
-        console.log(this.state.data);
-      })
-    }
+		return (
+			<div>
+				{ !this.props.data.length ? (
+				<div className="second-preloader"></div>
+				) : (
+				<div className="starships">
+					{allFilms}
+				</div>
+				)}
+			</div>
+		);
+	}
+}
 
-
-    render() {
-      return (
-       <div>
-           Hello4
-       </div>
-      );
-    }
-  }
-
-  export default Starships;
+export default Starships;

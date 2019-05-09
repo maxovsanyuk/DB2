@@ -1,38 +1,39 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import './species.css';
 
 class Species extends Component {
-    constructor(props){
-      super(props);
-      this.state = {
-        data : [],
-        isLoaded: false,
-      }
-    }
+	constructor(props){
+		super(props);
+		console.log(props)
+   }
 
+   	render() {
+		let allFilms = this.props.data.map((item, index) => {
+			return(
+				<section key={index} className="species-section">
+					<span className="name">Name: {item.name}</span>
+               <span>Language: {item.language}</span>
+					<span>Average height: {item.average_height}</span>
+					<span>Average lifespan: {item.average_lifespan}</span>
+					<span>Classification: {item.classification}</span>
+					<span>Skin colors: {item.skin_colors}</span>
+               <span>Designation: {item.designation}</span>
+				</section>
+         )
+		});
 
-    componentDidMount() {
-      const proxyurl = "https://cors-anywhere.herokuapp.com/";
-      const url = 'http://swapi.co/api/films';
-      fetch(proxyurl + url)
-      .then(response => response.json())
-      .then(data => {
-        this.setState({
-          data: data.results,
-          isLoaded: true,
-        })
-        console.log(this.state.data);
-      })
-    }
+		return (
+			<div>
+				{ !this.props.data.length ? (
+				<div className="second-preloader"></div>
+				) : (
+				<div className="species">
+					{allFilms}
+				</div>
+				)}
+			</div>
+		);
+	}
+}
 
-
-    render() {
-      return (
-       <div>
-           Hello3
-       </div>
-      );
-    }
-  }
-
-  export default Species;
+export default Species;

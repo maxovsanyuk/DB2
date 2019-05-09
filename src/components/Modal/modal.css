@@ -1,0 +1,267 @@
+
+.modal{
+    width: 100%;
+    height: 100%;
+    display: none;
+    min-height: 600px;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background: url(../../img/Savin-NY-Website-Background-Web.jpg)no-repeat center;
+    overflow: auto;
+}
+
+.close-btn{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    background: url(../../img/87251.png)no-repeat center;
+    background-size: cover;
+    transition: .3s;
+}
+
+.close-btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.overview{
+    width: 100%;
+    height: 20px;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.overview-content{
+    width: 80%;
+    padding: 0 10%;
+    margin-bottom: 40px;
+}
+
+.sort-name{
+    width: 90%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: rgba(145, 139, 139, 0.74);
+}
+
+.container{
+    width: 90%;
+    height: 300px;
+    overflow: auto;
+}
+.characters-container{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(133, 172, 187, 0.849);
+    margin: 0 0 20px 20px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.characters{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    font-size: 24px;
+}
+
+.characters-items{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(235, 229, 229);
+    margin: 5px 0;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.characters-items:hover{
+    background: rgb(48, 53, 52);
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.planets-container{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(133, 172, 187, 0.849);
+    margin: 0 0 20px 20px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.planets{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    font-size: 24px;
+}
+
+.planets-items{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(235, 229, 229);
+    margin: 5px 0;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.planets-items:hover{
+    background: rgb(48, 53, 52);
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.species-container{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(133, 172, 187, 0.849);
+    margin: 0 0 20px 20px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.species-title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    font-size: 24px;
+}
+
+.species-items{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(235, 229, 229);
+    margin: 5px 0;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.species-items:hover{
+    background: rgb(48, 53, 52);
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.starships-container{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(133, 172, 187, 0.849);
+    margin: 0 0 20px 20px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.starships-title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    font-size: 24px;
+}
+
+.starships-items{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(235, 229, 229);
+    margin: 5px 0;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.starships-items:hover{
+    background: rgb(48, 53, 52);
+    color: aliceblue;
+    cursor: pointer;
+}
+
+
+.vehicles-container{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(133, 172, 187, 0.849);
+    margin: 0 0 20px 20px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.vehicles-title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    font-size: 24px;
+}
+
+.vehicles-items{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(235, 229, 229);
+    margin: 5px 0;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.vehicles-items:hover{
+    background: rgb(48, 53, 52);
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.sort-title{
+    padding-right: 10px;
+}
+
+.sort-title:hover{
+    cursor: pointer;
+}
+
+.name-input:hover{
+    cursor: pointer;
+}
+
+.search{
+    width: 80%;
+    padding: 0 10px 0 20px;
+}
+
+

@@ -1,1 +1,42 @@
 
+.people{
+    width: 100%;
+    min-width: 800px;
+    height: calc( 100% - 80px);
+    min-height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    background: rgba(91, 68, 155, 0.473);
+    overflow: auto;
+}
+
+.people-section{
+    width: 30%;
+    min-width: 140px;
+    height: 30%;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(218, 226, 223, 0.925);
+    border-radius: 10px;
+    margin: 20px;
+    position: relative;
+    transition: .2s;
+}
+
+.people-section:hover{
+    transform: scale(1.04);
+    background: rgb(134, 192, 170);
+}
+
+.name{
+    margin-bottom: 10px;
+    font-weight: 700;
+}

@@ -7,26 +7,29 @@ import SecondTask from '../SecondTask/SecondTask';
 
 
 class Header extends Component {
+	constructor(props){
+		super(props);
+	}
 
 	render(){
 		return (
 			<Router>
 				<section className="header">
-					<Link to="/home" className="remove-underline">
+					<Link to="/DB2/home" className="remove-underline">
 						<div className="header-link">Home</div>
 					</Link>
 
-					<Link to="/first-task" className="remove-underline">
-						<div className="header-link">First Task</div>
+					<Link to="/DB2/first-task" className="remove-underline">
+						<div className="header-link first-task">First Task</div>
 					</Link>
 
-					<Link to="/second-task" className="remove-underline">
+					<Link to="/DB2/second-task" className="remove-underline">
 						<div className="header-link" data={this.props.data}>Second Task</div>
 					</Link>
 
-					<Route exact path="/home" component={Home} />
-					<Route path="/first-task" component={FirstTask} />
-					<Route path="/second-task" render={()=><SecondTask data={this.props.data} />} />
+					<Route exact path="/DB2/home" component={Home} />
+					<Route path="/DB2/first-task" component={FirstTask} />
+					<Route path="/DB2/second-task" render={()=><SecondTask data={this.props.data} />} />
 				</section>
 			</Router>
 		);

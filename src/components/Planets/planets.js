@@ -1,18 +1,38 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import './planets.css';
 
 class Planets extends Component {
-    constructor(props){
-      super(props);
-    }
+	constructor(props){
+		super(props);
+   }
 
-    render() {
-      return (
-       <div>
-           Hello2
-       </div>
-      );
-    }
-  }
+   	render() {
+		let allFilms = this.props.data.map((item, index) => {
+			return(
+				<section key={index} className="planet-section">
+					<span className="name">Name: {item.name}</span>
+					<span>Climate: {item.climate}</span>
+					<span>Diameter: {item.diameter}</span>
+					<span>Gravity: {item.gravity}</span>
+					<span>Terrain: {item.terrain}</span>
+               <span>Surface water: {item.surface_water}</span>
+               <span>Rotation period: {item.rotation_period}</span>
+				</section>
+         )
+		});
 
-  export default Planets;
+		return (
+			<div>
+				{ !this.props.data.length ? (
+				<div className="second-preloader"></div>
+				) : (
+				<div className="planet">
+					{allFilms}
+				</div>
+				)}
+			</div>
+		);
+	}
+}
+
+export default Planets;

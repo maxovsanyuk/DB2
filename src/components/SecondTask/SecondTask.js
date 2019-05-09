@@ -9,49 +9,48 @@ import Vehicles from '../Vehicles/vehicles';
 import './SecondTask.css'
 
 class SecondTask extends Component {
-    constructor(props){
+   constructor(props){
       super(props);
-      console.log(props);
-    }
+   }
 
-    render() {
+   render() {
       return (
-       <div className="films">
-       <div className="q">
-       <Link to="/second-task/films">
-        	<div>Films</div>
-        </Link>
+      <div className="all-items">
+      	<div className="all-items__header">
+				<Link to="/DB2/second-task/films" className="remove-underline">
+					<div className="second-task__link">Films</div>
+				</Link>
 
-        <Link to="/second-task/people">
-          <div>People</div>
-        </Link>
+				<Link to="/DB2/second-task/people" className="remove-underline">
+					<div className="second-task__link">People</div>
+				</Link>
 
-        <Link to="/second-task/planets">
-          <div>Planets</div>
-        </Link>
+				<Link to="/DB2/second-task/planets" className="remove-underline">
+					<div className="second-task__link">Planets</div>
+				</Link>
 
-        <Link to="/second-task/species">
-          <div>Species</div>
-        </Link>
+				<Link to="/DB2/second-task/species" className="remove-underline">
+					<div className="second-task__link">Species</div>
+				</Link>
 
-        <Link to="/second-task/starships">
-          <div>Starships</div>
-        </Link>
+				<Link to="/DB2/second-task/starships" className="remove-underline">
+					<div className="second-task__link">Starships</div>
+				</Link>
 
-        <Link to="/second-task/vehicles">
-          <div>Vehicles</div>
-        </Link>
-       </div>
+				<Link to="/DB2/second-task/vehicles" className="remove-underline">
+					<div className="second-task__link">Vehicles</div>
+				</Link>
+       	</div>
 
-        <Route path="/second-task/films" component={Films} />
-        <Route path="/second-task/people" component={People} />
-        <Route path="/second-task/planets" component={Planets} />
-        <Route path="/second-task/species" component={Species} />
-        <Route path="/second-task/starships" component={Starships} />
-        <Route path="/second-task/vehicles" component={Vehicles} />
-       </div>
+			<Route path="/DB2/second-task/films" render={()=><Films data={this.props.data.films} />} />
+			<Route path="/DB2/second-task/people" render={()=><People data={this.props.data.people} />} />
+			<Route path="/DB2/second-task/planets" render={()=><Planets data={this.props.data.planets} />} />
+			<Route path="/DB2/second-task/species" render={()=><Species data={this.props.data.species} />} />
+			<Route path="/DB2/second-task/starships" render={()=><Starships data={this.props.data.starships} />} />
+			<Route path="/DB2/second-task/vehicles" render={()=><Vehicles data={this.props.data.vehicles} />} />
+      </div>
       );
-    }
-  }
+   }
+}
 
-  export default SecondTask;
+export default SecondTask;

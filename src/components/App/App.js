@@ -6,8 +6,8 @@ import Header from '../Header/header';
 
 class App extends Component {
 	constructor(props){
-   	super(props);
-   	this.state = {
+   		super(props);
+   		this.state = {
 			films : [],
 			people: [],
 			planets: [],
@@ -18,10 +18,11 @@ class App extends Component {
 		}
 	}
 
+
   componentDidMount() {
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
     const filmsUrl = 'http://swapi.co/api/films';
-    fetch(proxyurl + filmsUrl)
+    let films = fetch(proxyurl + filmsUrl)
     .then(response => response.json())
     .then(films => {
 		this.setState({
@@ -30,7 +31,7 @@ class App extends Component {
     })
 
    const peopleUrl = 'http://swapi.co/api/people';
-   fetch(proxyurl + peopleUrl)
+   let people = fetch(proxyurl + peopleUrl)
    .then(response => response.json())
    .then(people => {
 		this.setState({
@@ -39,7 +40,7 @@ class App extends Component {
    })
 
    const planetsUrl = 'http://swapi.co/api/planets';
-   fetch(proxyurl + planetsUrl)
+   let planets = fetch(proxyurl + planetsUrl)
    .then(response => response.json())
    .then(planets => {
 		this.setState({
@@ -48,7 +49,7 @@ class App extends Component {
    })
 
    const speciesUrl = 'http://swapi.co/api/species';
-   fetch(proxyurl + speciesUrl)
+   let species = fetch(proxyurl + speciesUrl)
    .then(response => response.json())
    .then(species => {
 		this.setState({
@@ -57,7 +58,7 @@ class App extends Component {
    })
 
    const starshipsUrl = 'http://swapi.co/api/starships';
-   fetch(proxyurl + starshipsUrl)
+   let starships = fetch(proxyurl + starshipsUrl)
    .then(response => response.json())
    .then(starships => {
 		this.setState({
@@ -66,16 +67,20 @@ class App extends Component {
    })
 
    const vehiclesUrl = 'http://swapi.co/api/vehicles';
-   fetch(proxyurl + vehiclesUrl)
+   let vehicles = fetch(proxyurl + vehiclesUrl)
    .then(response => response.json())
    .then(vehicles => {
 		this.setState({
 			vehicles: vehicles.results,
-			isLoaded: true,
 		})
    })
-}
 
+   Promise.all([films, people, planets, species, starships, vehicles]).then( () => {
+		this.setState({
+			isLoaded: true,
+		})
+  	});
+}
 
   	render() {
 		return (
