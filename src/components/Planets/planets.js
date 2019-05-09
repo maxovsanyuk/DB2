@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import './planets.css';
 
 class Planets extends Component {
-	constructor(props){
-		super(props);
-   }
 
    	render() {
 		let allFilms = this.props.data.map((item, index) => {

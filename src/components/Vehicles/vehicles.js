@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import './vehicles.css';
 
 class Vehicles extends Component {
-	constructor(props){
-		super(props);
-   }
 
    	render() {
 		let allFilms = this.props.data.map((item, index) => {
