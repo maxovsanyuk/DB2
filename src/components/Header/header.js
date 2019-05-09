@@ -7,9 +7,6 @@ import SecondTask from '../SecondTask/SecondTask';
 
 
 class Header extends Component {
-	constructor(props){
-		super(props);
-	}
 
 	render(){
 		return (

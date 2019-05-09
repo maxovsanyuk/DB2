@@ -9,9 +9,6 @@ import Vehicles from '../Vehicles/vehicles';
 import './SecondTask.css'
 
 class SecondTask extends Component {
-   constructor(props){
-      super(props);
-   }
 
    render() {
       return (

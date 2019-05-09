@@ -3,9 +3,6 @@ import Iframe from 'react-iframe'
 import './first-task.css'
 
 class FirstTask extends Component {
-    constructor(props){
-      super(props);
-    }
 
    render() {
       return (

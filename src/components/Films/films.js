@@ -180,54 +180,64 @@ class Films extends Component {
 		const opening_crawl = target.getAttribute('data-opening_crawl');
 
 		characters.map(item => {
-			fetch(item)
-			.then(response => response.json())
-			.then(characters => {
-				this.setState({
-					characters: this.state.characters.concat(characters),
-					opening_crawl: opening_crawl,
+			return(
+				fetch(item)
+				.then(response => response.json())
+				.then(characters => {
+					this.setState({
+						characters: this.state.characters.concat(characters),
+						opening_crawl: opening_crawl,
+					})
 				})
-			})
+			)
 		})
 
 		planets.map(item => {
-			fetch(item)
-			.then(response => response.json())
-			.then(planets => {
-				this.setState({
-					planets: this.state.planets.concat(planets),
+			return(
+				fetch(item)
+				.then(response => response.json())
+				.then(planets => {
+					this.setState({
+						planets: this.state.planets.concat(planets),
+					})
 				})
-			})
+			)
 		})
 
 		species.map(item => {
-			fetch(item)
-			.then(response => response.json())
-			.then(species => {
-				this.setState({
-					species: this.state.species.concat(species),
+			return(
+				fetch(item)
+				.then(response => response.json())
+				.then(species => {
+					this.setState({
+						species: this.state.species.concat(species),
+					})
 				})
-			})
+			)
 		})
 
 		starships.map(item => {
-			fetch(item)
-			.then(response => response.json())
-			.then(starships => {
-				this.setState({
-					starships: this.state.starships.concat(starships),
+			return(
+				fetch(item)
+				.then(response => response.json())
+				.then(starships => {
+					this.setState({
+						starships: this.state.starships.concat(starships),
+					})
 				})
-			})
+			)
 		})
 
 		vehicles.map(item => {
-			fetch(`${item}`)
-			.then(response => response.json())
-			.then(vehicles => {
-				this.setState({
-					vehicles: this.state.vehicles.concat(vehicles),
+			return(
+				fetch(item)
+				.then(response => response.json())
+				.then(vehicles => {
+					this.setState({
+						vehicles: this.state.vehicles.concat(vehicles),
+					})
 				})
-			})
+			)
 		})
 
 		document.getElementById('modal').style.display = "flex";
