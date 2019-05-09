@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/DB2/static/css/main.51118b3f.chunk.css",
+    "main.js": "/DB2/static/js/main.9eb5880e.chunk.js",
+    "main.js.map": "/DB2/static/js/main.9eb5880e.chunk.js.map",
+    "runtime~main.js": "/DB2/static/js/runtime~main.0bebce02.js",
+    "runtime~main.js.map": "/DB2/static/js/runtime~main.0bebce02.js.map",
+    "static/css/2.764ccc25.chunk.css": "/DB2/static/css/2.764ccc25.chunk.css",
+    "static/js/2.3fb49619.chunk.js": "/DB2/static/js/2.3fb49619.chunk.js",
+    "static/js/2.3fb49619.chunk.js.map": "/DB2/static/js/2.3fb49619.chunk.js.map",
+    "index.html": "/DB2/index.html",
+    "precache-manifest.16dbb7d77513def3b399402ba55c85db.js": "/DB2/precache-manifest.16dbb7d77513def3b399402ba55c85db.js",
+    "service-worker.js": "/DB2/service-worker.js",
+    "static/css/2.764ccc25.chunk.css.map": "/DB2/static/css/2.764ccc25.chunk.css.map",
+    "static/css/main.51118b3f.chunk.css.map": "/DB2/static/css/main.51118b3f.chunk.css.map",
+    "static/media/first-task.css": "/DB2/static/media/IAP34240.277afe19.png",
+    "static/media/modal.css": "/DB2/static/media/Savin-NY-Website-Background-Web.e46bbac5.jpg",
+    "static/media/App.css": "/DB2/static/media/ada673119a41a7538cc192c2df75f8e2.7556e4d1.gif",
+    "static/media/header.css": "/DB2/static/media/bg2.357a6e86.jpg",
+    "static/media/SecondTask.css": "/DB2/static/media/pxVePU.a0ecd676.gif",
+    "static/media/films.css": "/DB2/static/media/y5ymCvd.85fe7cd0.gif"
+  }
+}
